@@ -33,4 +33,8 @@ The dashboard will be available at http://127.0.0.1:8050/
 - `utils/`: Utility functions for charts and data processing
 - `data/`: CSV files with test results
 - `logs/`: Test execution log files
-- `assets/`: CSS styles and static assets~~~~
+- `assets/`: CSS styles and static assets~~~~~~~~
+
+![img.png](img.png)
+
+![img_1.png](img_1.png)
