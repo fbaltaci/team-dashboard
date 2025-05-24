@@ -8,11 +8,11 @@ app = dash.Dash(
     external_stylesheets=[dbc.themes.BOOTSTRAP]
 )
 
-app.title = "Fehmi's Test Dashboard"
+app.title = "Team Dashboard"
 
 app.layout = html.Div([
     dbc.NavbarSimple(
-        brand="Fehmi's Dashboard",
+        brand="Team's Dashboard",
         brand_href="/",
         color="dark",
         dark=True,
