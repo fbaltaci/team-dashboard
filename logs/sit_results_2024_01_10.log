@@ -1,0 +1,10 @@
+2024-01-10 01:12:03,101 - INFO - Initializing test engine
+2024-01-10 01:12:03,765 - INFO - Loading test configuration
+2024-01-10 01:12:04,188 - INFO - Connecting to test database
+2024-01-10 01:12:05,029 - WARNING - Slow response from database: 621ms
+2024-01-10 01:12:05,844 - INFO - Test Case: Verify User Roles - PASSED
+2024-01-10 01:12:06,031 - INFO - Test Case: Delete Access Permissions - PASSED
+2024-01-10 01:12:07,002 - INFO - Test Case: Cross-team visibility - FAILED
+2024-01-10 01:12:07,003 - ERROR - AssertionError: Expected status 200 but got 403
+2024-01-10 01:12:07,999 - INFO - Test Case: Dashboard Widget Load - PASSED
+2024-01-10 01:12:08,250 - INFO - Run complete: 3 passed, 1 failed
