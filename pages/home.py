@@ -30,17 +30,15 @@ env_files = {
 }
 
 layout = html.Div(className="page-container", children=[
-    html.Div(style={"display": "flex", "justifyContent": "space-between", "alignItems": "center"}, children=[
-        html.H2("Test Results Dashboard"),
+    html.Div(className="dashboard-header", children=[
         dcc.Dropdown(
             id="env-dropdown",
             options=[{"label": env, "value": env} for env in env_files.keys()],
             value="Dev",
-            clearable=False,
-            style={"width": "200px"}
+            clearable=False
         ),
     ]),
-    html.Div(id="env-results-container", style={"marginTop": "2rem"})
+    html.Div(id="env-results-container")
 ])
 
 
@@ -59,10 +57,10 @@ def update_dashboard(env):
             continue
 
         section = html.Div(className="tenant-section", children=[
-            html.H4(tenant_name),
+            html.H4(className="tenant-name", children=tenant_name),
             html.Div(className="responsive-row", children=[
-                html.Div(get_pie_chart(df), className="chart-box"),
-                html.Div(get_summary_table(df), className="table-box"),
+                html.Div(className="chart-box", children=get_pie_chart(df)),
+                html.Div(className="table-box", children=get_summary_table(df))
             ])
         ])
         components.append(section)

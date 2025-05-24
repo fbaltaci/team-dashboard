@@ -6,7 +6,7 @@ import plotly.express as px
 dash.register_page(__name__, path="/historical", name="Historical")
 
 # Load the historical data from CSV
-df = pd.read_csv("data/historical_results.csv")
+df = pd.read_csv("data/historical_results/historical_results.csv")
 
 layout = html.Div(className="page-container", children=[
     html.H3("Historical Test Execution Results"),
