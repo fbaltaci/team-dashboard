@@ -8,29 +8,19 @@ LOG_DIR = "logs"
 log_files = sorted([f for f in os.listdir(LOG_DIR) if f.endswith(".log")])
 default_log = log_files[0] if log_files else None
 
-layout = html.Div(className="page-container", children=[
+layout = html.Div(className="logs-page-container", children=[
     html.H3(id="logs-page-header", children="Execution Logs"),
 
     dcc.Dropdown(
         id="log-selector",
         options=[{"label": f, "value": f} for f in log_files],
         value=default_log,
-        placeholder="Select a log file",
-        style={"width": "300px", "marginBottom": "1rem"}
+        placeholder="Select a log file"
     ),
 
-    html.Div(id="log-file-name", style={"marginBottom": "1rem", "fontWeight": "bold"}),
+    html.Div(id="log-file-name"),
 
-    html.Pre(id="log-content", style={
-        "whiteSpace": "pre-wrap",
-        "backgroundColor": "#f8f9fa",
-        "padding": "1rem",
-        "borderRadius": "8px",
-        "maxHeight": "500px",
-        "overflowY": "scroll",
-        "fontSize": "0.9rem",
-        "border": "1px solid #ddd"
-    })
+    html.Pre(id="log-content")
 ])
 
 

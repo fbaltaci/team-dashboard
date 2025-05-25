@@ -1,6 +1,7 @@
 from dash import dcc
 import plotly.graph_objects as go
 from dash import dash_table
+import pandas as pd
 
 
 def get_pie_chart(df):
@@ -30,10 +31,38 @@ def get_pie_chart(df):
 
 
 def get_summary_table(df):
+    df = df.copy()
+
+    total_row = pd.DataFrame({
+        "Test Suite": ["Total"],
+        "Total": [df["Total"].sum()],
+        "Passed": [df["Passed"].sum()],
+        "Failed": [df["Failed"].sum()],
+        "Untested": [df["Untested"].sum()],
+        "Blocked": [df["Blocked"].sum()],
+        "Pass %": [round((df["Passed"].sum() / df["Total"].sum()) * 100, 2) if df["Total"].sum() else 0.0]
+    })
+
+    df_with_total = pd.concat([df, total_row], ignore_index=True)
+
     return dash_table.DataTable(
-        data=df.to_dict("records"),
-        columns=[{"name": i, "id": i} for i in df.columns],
+        columns=[{"name": i, "id": i} for i in df_with_total.columns],
+        data=df_with_total.to_dict("records"),
         style_table={"overflowX": "auto"},
-        style_cell={"textAlign": "center"},
-        page_size=50
+        style_cell={
+            "textAlign": "center",
+            "padding": "8px",
+            "fontFamily": "Arial",
+        },
+        style_header={
+            "backgroundColor": "#f1f1f1",
+            "fontWeight": "bold"
+        },
+        style_data_conditional=[
+            {
+                "if": {"filter_query": '{Test Suite} = "Total"'},
+                "backgroundColor": "#A9A9A9",
+                "fontWeight": "bold"
+            }
+        ]
     )

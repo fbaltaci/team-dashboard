@@ -11,21 +11,7 @@
     padding: 0.5rem 4rem;
 }
 
-/* Historical Page */
-
-#tenant-dropdown-label {
-    margin-left: 4rem
-}
-
-#environment-tabs {
-    margin: 0 4rem;
-}
-
-#historical-chart {
-    margin: 0 4rem;
-}
-
-/* Dashboard Styles */
+/* Home Page */
 
 #dashboard-container {
     padding: 2rem;
@@ -68,4 +54,52 @@
 .chart-box, .table-box {
     flex: 1;
     min-width: 300px;
+}
+
+.table-box {
+    flex: 1;
+    min-width: 300px;
+    border-left: 2px solid #ddd;
+}
+
+
+/* Historical Page */
+
+#tenant-dropdown-label {
+    margin-left: 4rem
+}
+
+#environment-tabs {
+    margin: 0 4rem;
+}
+
+#historical-chart {
+    margin: 0 4rem;
+}
+
+/* Logs Page */
+
+.logs-page-container {
+    margin: 0 4rem;
+}
+
+#log-selector {
+    width: 300px;
+    margin-bottom: 1rem;
+}
+
+#log-file-name {
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+#log-content {
+    white-space: pre-wrap;
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+    max-height: 500px;
+    overflow-y: scroll;
+    font-size: 0.9rem;
+    border: 1px solid #ddd;
 }
