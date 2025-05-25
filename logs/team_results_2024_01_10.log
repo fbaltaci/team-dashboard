@@ -1,10 +1,19 @@
-2024-01-10 01:12:03,101 - INFO - Initializing test engine
-2024-01-10 01:12:03,765 - INFO - Loading test configuration
-2024-01-10 01:12:04,188 - INFO - Connecting to test database
-2024-01-10 01:12:05,029 - WARNING - Slow response from database: 621ms
-2024-01-10 01:12:05,844 - INFO - Test Case: Verify User Roles - PASSED
-2024-01-10 01:12:06,031 - INFO - Test Case: Delete Access Permissions - PASSED
-2024-01-10 01:12:07,002 - INFO - Test Case: Cross-team visibility - FAILED
-2024-01-10 01:12:07,003 - ERROR - AssertionError: Expected status 200 but got 403
-2024-01-10 01:12:07,999 - INFO - Test Case: Dashboard Widget Load - PASSED
-2024-01-10 01:12:08,250 - INFO - Run complete: 3 passed, 1 failed
+2024-01-10 08:32:15,841 - INFO - Starting test suite execution
+2024-01-10 08:32:16,000 - DEBUG - Initializing WebDriver
+2024-01-10 08:32:16,102 - INFO - Environment: Tenant 1
+2024-01-10 08:32:16,150 - DEBUG - Loading configuration for Tenant 1
+2024-01-10 08:32:16,220 - INFO - Test suite: SmokeTests
+2024-01-10 08:32:17,411 - INFO - Running test: Login Functionality
+2024-01-10 08:32:17,702 - DEBUG - Entering username and password
+2024-01-10 08:32:17,850 - DEBUG - Submitting login form
+2024-01-10 08:32:18,005 - INFO - Test passed: Login Functionality
+2024-01-10 08:32:18,510 - INFO - Running test: Portfolio Overview Page
+2024-01-10 08:32:19,405 - DEBUG - Waiting for portfolio data to load
+2024-01-10 08:32:20,293 - ERROR - Test failed: Portfolio Overview Page - Timeout while loading data
+2024-01-10 08:32:20,851 - INFO - Running test: API Health Check
+2024-01-10 08:32:21,100 - DEBUG - Sending GET request to /api/health
+2024-01-10 08:32:21,143 - INFO - Test passed: API Health Check
+2024-01-10 08:32:21,400 - INFO - Running test: Notification Settings Page
+2024-01-10 08:32:21,472 - WARNING - Test skipped: Notification Settings Page - Feature not enabled for Tenant 1
+2024-01-10 08:32:21,600 - DEBUG - Tearing down WebDriver
+2024-01-10 08:32:21,655 - INFO - Completed execution with 2 passed, 1 failed, 1 skipped

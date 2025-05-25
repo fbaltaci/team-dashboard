@@ -5,7 +5,6 @@ from utils.charts import get_pie_chart, get_summary_table
 
 dash.register_page(__name__, path="/", name="Home")
 
-# Load all env CSVs
 env_files = {
     "Dev": [
         ("Tenant 1", "data/dev_results/tr_results_tenant_1_dev.csv"),

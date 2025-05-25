@@ -1,0 +1,27 @@
+2024-01-11 02:21:10,203 - INFO - Initializing test engine
+2024-01-11 02:21:10,867 - INFO - Loading test configuration
+2024-01-11 02:21:11,288 - INFO - Connecting to test database
+2024-01-11 02:21:12,139 - WARNING - Slow response from database: 704ms
+2024-01-11 02:21:12,952 - INFO - Test Case: Verify User Roles - PASSED
+2024-01-11 02:21:13,147 - DEBUG - Role mappings validated against policy matrix
+2024-01-11 02:21:13,550 - INFO - Test Case: Delete Access Permissions - PASSED
+2024-01-11 02:21:13,707 - DEBUG - User permission record removed successfully
+2024-01-11 02:21:14,112 - INFO - Test Case: Cross-team visibility - FAILED
+2024-01-11 02:21:14,113 - ERROR - AssertionError: Expected status 200 but got 403
+2024-01-11 02:21:14,190 - DEBUG - Response body: {"error": "access denied"}
+2024-01-11 02:21:15,007 - INFO - Test Case: Dashboard Widget Load - PASSED
+2024-01-11 02:21:15,259 - DEBUG - All widgets rendered in under 1200ms
+2024-01-11 02:21:15,710 - INFO - Test Case: Notification Preferences - PASSED
+2024-01-11 02:21:15,801 - DEBUG - Email and SMS toggles persisted to database
+2024-01-11 02:21:16,098 - INFO - Test Case: Download Report PDF - PASSED
+2024-01-11 02:21:16,431 - DEBUG - File size: 342KB, Response time: 812ms
+2024-01-11 02:21:16,822 - INFO - Test Case: Schedule Job Execution - SKIPPED
+2024-01-11 02:21:16,823 - WARNING - Feature flag 'job_scheduler' is disabled for this tenant
+2024-01-11 02:21:17,202 - INFO - Test Case: Language Localization - PASSED
+2024-01-11 02:21:17,366 - DEBUG - Selected locale: fr-FR, verified UI labels
+2024-01-11 02:21:17,811 - INFO - Test Case: Bulk User Upload - FAILED
+2024-01-11 02:21:17,812 - ERROR - TimeoutError: Upload processing exceeded 5000ms
+2024-01-11 02:21:17,901 - DEBUG - Uploaded file had 2056 entries
+2024-01-11 02:21:18,330 - INFO - Test Case: Access Audit Log - PASSED
+2024-01-11 02:21:18,462 - DEBUG - Queried last 30 days of logs for admin user
+2024-01-11 02:21:18,900 - INFO - Test execution complete: 7 passed, 2 failed, 1 skipped

@@ -5,17 +5,16 @@ import os
 dash.register_page(__name__, path="/logs", name="Logs")
 
 LOG_DIR = "logs"
+log_files = sorted([f for f in os.listdir(LOG_DIR) if f.endswith(".log")])
+default_log = log_files[0] if log_files else None
 
 layout = html.Div(className="page-container", children=[
-    html.H3("Execution Logs"),
+    html.H3(id="logs-page-header", children="Execution Logs"),
 
     dcc.Dropdown(
         id="log-selector",
-        options=[
-            {"label": f, "value": f}
-            for f in os.listdir(LOG_DIR)
-            if f.endswith(".log")
-        ],
+        options=[{"label": f, "value": f} for f in log_files],
+        value=default_log,
         placeholder="Select a log file",
         style={"width": "300px", "marginBottom": "1rem"}
     ),

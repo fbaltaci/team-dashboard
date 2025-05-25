@@ -18,12 +18,12 @@ def get_pie_chart(df):
     fig.update_layout(
         title=dict(
             text="Test Case Results",
-            y=0.02,  # Near the bottom (0 = bottom, 1 = top)
-            x=0.5,  # Centered horizontally
+            y=0.02,
+            x=0.5,
             xanchor='center',
             yanchor='bottom'
         ),
-        margin=dict(t=0, b=60)  # Add bottom margin so title doesn’t get cut off
+        margin=dict(t=0, b=60)
     )
 
     return dcc.Graph(figure=fig)

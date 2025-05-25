@@ -1,3 +1,9 @@
+#logs-page-header,
+#historical-page-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
 /* Navigation Bar */
 
 .navbar {
@@ -6,11 +12,6 @@
 }
 
 /* Historical Page */
-
-#historical-page-header {
-    text-align: center;
-    margin-bottom: 1.5rem;
-}
 
 #tenant-dropdown-label {
     margin-left: 4rem
