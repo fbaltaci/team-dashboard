@@ -1,5 +1,5 @@
 Test Suite,Total,Passed,Failed,Untested,Blocked,Pass %
-E2E Tenant 2 Dev,26,26,0,0,0,100.0
-Sanity Tenant 2 Dev,154,154,0,0,0,100.0
-Postman API Tenant 2 Dev,234,233,1,0,0,99.57
-Vanguard Tenant 2 Dev,93,93,0,0,0,100.0
+E2E Tenant 2 Dev,30,28,1,1,0,93.33
+Sanity Tenant 2 Dev,150,145,3,1,1,96.67
+Postman API Tenant 2 Dev,238,230,5,2,1,96.64
+Vanguard Tenant 2 Dev,95,92,2,0,1,96.84

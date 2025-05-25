@@ -1,5 +1,5 @@
 Test Suite,Total,Passed,Failed,Untested,Blocked,Pass %
-E2E Tenant 3 Preprod,26,26,0,0,0,100.0
-Sanity Tenant 3 Preprod,154,154,0,0,0,100.0
-Postman API Tenant 3 Preprod,234,233,1,0,0,99.57
-Vanguard Tenant 3 Preprod,93,93,0,0,0,100.0
+E2E Tenant 3 Preprod,30,28,1,1,0,93.33
+Sanity Tenant 3 Preprod,159,150,4,3,2,94.34
+Postman API Tenant 3 Preprod,241,232,5,2,2,96.27
+Vanguard Tenant 3 Preprod,96,91,3,1,1,94.79

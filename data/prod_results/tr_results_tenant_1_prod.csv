@@ -1,5 +1,5 @@
 Test Suite,Total,Passed,Failed,Untested,Blocked,Pass %
-E2E Tenant 1 Prod,26,26,0,0,0,100.0
-Sanity Tenant 1 Prod,154,154,0,0,0,100.0
-Postman API Tenant 1 Prod,234,233,1,0,0,99.57
-Vanguard Tenant 1 Prod,93,93,0,0,0,100.0
+E2E Tenant 1 Prod,29,27,1,1,0,93.10
+Sanity Tenant 1 Prod,158,149,5,2,2,94.30
+Postman API Tenant 1 Prod,238,230,5,2,1,96.64
+Vanguard Tenant 1 Prod,97,93,2,1,1,95.88
