@@ -8,18 +8,20 @@ app = dash.Dash(
     external_stylesheets=[dbc.themes.BOOTSTRAP]
 )
 
-app.title = "Team Dashboard"
-
 app.layout = html.Div([
-    dbc.NavbarSimple(
-        brand="Team's Dashboard",
-        brand_href="/",
+    dbc.Navbar(
         color="dark",
         dark=True,
+        className="navbar",
         children=[
-            dbc.NavItem(dbc.NavLink("Home", href="/")),
-            dbc.NavItem(dbc.NavLink("Historical", href="/historical")),
-            dbc.NavItem(dbc.NavLink("Logs", href="/logs")),
+            dbc.Container(fluid=True, children=[
+                dbc.NavbarBrand("Team's Dashboard", href="/"),
+                dbc.Nav([
+                    dbc.NavItem(dbc.NavLink("Home", href="/", active="exact")),
+                    dbc.NavItem(dbc.NavLink("Historical", href="/historical", active="exact")),
+                    dbc.NavItem(dbc.NavLink("Logs", href="/logs", active="exact")),
+                ], className="ms-auto", navbar=True)
+            ])
         ]
     ),
     html.Div(className="p-4", children=[
