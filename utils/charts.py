@@ -1,4 +1,4 @@
-from dash import dcc, html
+from dash import dcc
 import plotly.graph_objects as go
 from dash import dash_table
 
@@ -14,7 +14,17 @@ def get_pie_chart(df):
         values=[total_passed, total_failed, total_untested, total_blocked],
         marker_colors=["#3CB850", "#E40046", "#FFC300", "#C0C0C0"]
     )])
-    fig.update_layout(title="Test Case Results")
+
+    fig.update_layout(
+        title=dict(
+            text="Test Case Results",
+            y=0.02,  # Near the bottom (0 = bottom, 1 = top)
+            x=0.5,  # Centered horizontally
+            xanchor='center',
+            yanchor='bottom'
+        ),
+        margin=dict(t=0, b=60)  # Add bottom margin so title doesn’t get cut off
+    )
 
     return dcc.Graph(figure=fig)
 
